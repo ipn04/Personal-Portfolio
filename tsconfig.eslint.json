@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.app.json",
+  "include": ["src", "vite.config.ts"],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@assets/*": ["assets/*"],
+      "@shared/*": ["shared/*"],
+      "@pages/*": ["pages/*"],
+    }
+  }
+}

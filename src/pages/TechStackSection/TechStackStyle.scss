@@ -1,0 +1,24 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.title-header {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-secondary-text);
+    padding: 12px 0;
+}
+.skills-container {
+    width: 60%;
+    @include media-breakpoint-down(md){
+        width: 100%;
+    }
+    .skill-item {
+        padding: 2px 14px;
+        border-radius: 10px;
+        box-shadow: 0 0 0 1px #ccc;
+        @include media-breakpoint-down(md){
+            font-size: 12px;
+        }
+    }
+}
