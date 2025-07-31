@@ -65,7 +65,7 @@ function Achievements() {
         </div>
         <div className='scrollable-x-container p-5'>
           <div
-            className='scrollable d-flex overflow-auto flex-row gap-4'
+            className='scrollable justify-content-center align-items-center d-flex overflow-auto flex-row gap-4'
             ref={scrollRef}
           >
             {duplicatedAchievements.map((ach, index) => (
