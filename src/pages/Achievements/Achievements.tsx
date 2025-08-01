@@ -38,21 +38,30 @@ function Achievements() {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    const scrollStep = 1;
-    const scrollInterval = 25;
+    let intervalId: NodeJS.Timeout;
 
-    const intervalId = setInterval(() => {
-      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
-        scrollContainer.scrollLeft = 0;
-      } else {
-        scrollContainer.scrollLeft += scrollStep;
-      }
-    }, scrollInterval);
+    const startScroll = () => {
+      intervalId = setInterval(() => {
+        scrollContainer.scrollLeft += 1;
+        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth - scrollContainer.clientWidth - 1) {
+          scrollContainer.scrollLeft = 0;
+        }
+      }, 25);
+    };
 
-    return () => clearInterval(intervalId);
+    scrollContainer.addEventListener('mouseenter', () => clearInterval(intervalId));
+    scrollContainer.addEventListener('mouseleave', startScroll);
+
+    startScroll();
+
+    return () => {
+      clearInterval(intervalId);
+      scrollContainer.removeEventListener('mouseenter', () => clearInterval(intervalId));
+      scrollContainer.removeEventListener('mouseleave', startScroll);
+    };
   }, []);
 
-  const duplicatedAchievements = [ ...achievements, ...achievements ];
+  const duplicatedAchievements = Array(4).fill(achievements).flat();
 
   return (
     <CustomContainer>

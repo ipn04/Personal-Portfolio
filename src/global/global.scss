@@ -12,6 +12,7 @@
 
   --font-outfit: 'Outfit', sans-serif;
   --font-handwriting: 'Caveat', cursive;
+    scroll-behavior: smooth;
 }
 body {
   background-color: var(--darkmode);
@@ -20,3 +21,10 @@ body {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--color-secondary-text);
+  border-radius: 8px;
+}

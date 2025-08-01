@@ -35,6 +35,7 @@ type Project = {
   stacks: { title: string; icon: string }[];
   color: string;
   gradientColor: string;
+  url: string;
 };
 
 const projects: Project[] = [
@@ -61,7 +62,8 @@ const projects: Project[] = [
       { title: 'Tailwind', icon: tailwind }
     ],
     color: 'MESColor',
-    gradientColor: 'MESColor'
+    gradientColor: 'MESColor',
+    url: 'https://github.com/ipn04/sk-muzonproper.git'
   },
   {
     id: '2',
@@ -83,7 +85,8 @@ const projects: Project[] = [
       { title: 'Git', icon: git }
     ],
     color: 'SibolColor',
-    gradientColor: 'SibolColor'
+    gradientColor: 'SibolColor',
+    url: 'https://github.com/ipn04/SibolApp.git'
 
   },
   {
@@ -108,7 +111,8 @@ const projects: Project[] = [
       { title: 'Pusher', icon: pusher }
     ],
     color: 'PawColor',
-    gradientColor: 'PawColor'
+    gradientColor: 'PawColor',
+    url: 'https://github.com/ipn04/Noah-s-Ark-Cat-and-Dog.git'
   },
   {
     id: '4',
@@ -130,7 +134,8 @@ const projects: Project[] = [
       { title: 'VSCode', icon: vscode }
     ],
     color: 'SHColor',
-    gradientColor: 'SHColor'
+    gradientColor: 'SHColor',
+    url: 'https://github.com/ipn04/Safe-Haven.git'
   }
 ];
 
@@ -175,7 +180,16 @@ const ProjectScroll: React.FC = () => {
               <div className='project-section-img-container'>
                 <div className='tagline-container d-flex justify-content-between align-items-center'>
                   <h3 className="project-tagline">{proj.tagline}</h3>
-                  <span><ArrowRight /></span>
+                  <span>
+                    <a
+                      href={projects[activeIndex].url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='url-link text-decoration-none'
+                    >
+                      <ArrowRight />
+                    </a>
+                  </span>
                 </div>
                 <div className="project-image-wrapper">
                   <img src={proj.image} alt={proj.title} className="project-image" />
@@ -211,7 +225,14 @@ const ProjectScroll: React.FC = () => {
               <div className='title-container d-flex justify-content-between align-items-center'>
                 <h3 className='title m-0'>{projects[activeIndex].title}</h3>
                 <div className='github-link d-flex justify-content-center align-items-center gap-1'>
-                  <Github />
+                  <a
+                    href={projects[activeIndex].url}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='url-link text-decoration-none'
+                  >
+                    <Github />
+                  </a>
                 </div>
               </div>
               <p className='description'>{projects[activeIndex].description}</p>

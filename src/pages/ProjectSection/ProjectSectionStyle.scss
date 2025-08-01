@@ -225,6 +225,10 @@
     }
   }
 
+  .url-link {
+    color: #FFF;
+  }
+
   .right-pane {
     width: 40%;
     position: sticky;
@@ -263,11 +267,19 @@
       }
 
       &.PawColor .custom-line {
-        background-color: var(--project-color-paw);;
+        background-color: var(--project-color-paw);
       }
 
       &.SHColor .custom-line {
-        background-color: var(--project-color-sh);;
+        color: var(--project-color-sh);
+      }
+
+      .github-link {
+        cursor: pointer;
+
+        svg:hover {
+          color: gray;
+        }
       }
 
       .lists-item-box {

@@ -1,0 +1,99 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.introduction-container {
+    height: 100vh;
+    @include media-breakpoint-down(lg) {
+        flex-direction: column !important;
+        height: 100%;
+        padding: 40px 0;
+    }
+}
+.introduction {
+    font-size: 14px;
+    font-weight: 900;
+    color: var(--color-secondary-text);
+}
+.full-name {
+    font-weight: 500;
+    @include media-breakpoint-down(md) {
+        font-size: 22px;
+    }
+}
+.introduction-role {
+    background: linear-gradient(288deg, #ff8000, #f0c 53.2394%, #04f);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    font-weight: 800;
+    @include media-breakpoint-down(md) {
+        font-size: 32px;
+    }
+}
+.left {
+    @include media-breakpoint-down(md) {
+        padding: 12px;
+    }
+    @include media-breakpoint-down(xl) {
+        margin: 40px 0;
+    }
+}
+.right {
+    width: 500px;
+    height: 500px;
+    border: 5px solid var(--color-secondary-text);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+    @include media-breakpoint-down(xl) {
+        width: 400px !important;
+        height: 400px !important;
+    }
+}
+.profile-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 100px;
+    @include media-breakpoint-down(xl) {
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
+.introduction-description {
+    font-size: 16px;
+    color: var(--color-secondary-text);
+    @include media-breakpoint-down(md) {
+        font-size: 14px;
+    }
+}
+.social-links a {
+    text-decoration: none;
+    color: var(--color-secondary-text);
+}
+.work-experience-wrapper {
+    margin-top: 16px;
+    .work-experience {
+        font-size: 16px;
+        margin-bottom: 0;
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
+        }
+    }
+    .arrow-right {
+        width: 26px;
+        height: 26px;
+    }
+}
+.work-experience-wrapper:hover {
+    cursor: pointer;
+}
