@@ -34,7 +34,7 @@
 }
 .left {
     @include media-breakpoint-down(md) {
-        padding: 12px;
+        padding: 16px;
     }
     @include media-breakpoint-down(xl) {
         margin: 40px 0;
