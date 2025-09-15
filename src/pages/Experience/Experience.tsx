@@ -2,6 +2,7 @@ import './ExperienceStyle.scss';
 import bootstrap from '@assets/images/icons/bootstrap.png';
 import dart from '@assets/images/icons/dart.png';
 import docker from '@assets/images/icons/docker.png';
+import Expogo from '@assets/images/icons/expo.png';
 import firebase from '@assets/images/icons/firebase.png';
 import flutter from '@assets/images/icons/flutter.png';
 import git from '@assets/images/icons/git.png';
@@ -11,6 +12,7 @@ import mysql from '@assets/images/icons/mysql.png';
 import nest from '@assets/images/icons/nestJS.png';
 import nodejs from '@assets/images/icons/nodeJS.png';
 import pgsql from '@assets/images/icons/pgsql.png';
+import Postman from '@assets/images/icons/postman.png';
 import react from '@assets/images/icons/react.png';
 import tailwind from '@assets/images/icons/tailwind.png';
 import typescript from '@assets/images/icons/typescript.png';
@@ -39,7 +41,9 @@ const experiences = [
       { title: 'NodeJS', icon: nodejs },
       { title: 'Typescript', icon: typescript },
       { title: 'Bootstrap', icon: bootstrap },
-      { title: 'Docker', icon: docker }
+      { title: 'Docker', icon: docker },
+      { title: 'Expo Go', icon: Expogo },
+      { title: 'Postman', icon: Postman }
     ]
   },
   {

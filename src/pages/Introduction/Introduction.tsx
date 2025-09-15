@@ -4,7 +4,11 @@ import Github from '@assets/icons/Git';
 import Linkedin from '@assets/icons/Linkedin';
 import profile from '@assets/images/profile/profile.png';
 
-function Introduction() {
+type IntroductionProps = {
+  onScrollToExperience?: () => void;
+};
+
+function Introduction({ onScrollToExperience }: IntroductionProps) {
   const socialLinks = [
     { icon: <Linkedin />, url: 'https://www.linkedin.com/in/ivan-nicolas-7522b1221' },
     { icon: <Github />, url: 'https://github.com/ipn04' }
@@ -38,7 +42,7 @@ function Introduction() {
             </a>
           ))}
         </div>
-        <div className="d-flex align-items-center gap-2 work-experience-wrapper">
+        <div className="d-flex align-items-center gap-2 work-experience-wrapper" onClick={onScrollToExperience}>
           <h5 className='work-experience'>Work Experience</h5>
           <ArrowRight />
         </div>

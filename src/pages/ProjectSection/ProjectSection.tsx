@@ -2,9 +2,13 @@ import React, { useRef, useState, useEffect } from 'react';
 import './ProjectSectionStyle.scss';
 import ArrowRight from '@assets/icons/ArrowRight';
 import Github from '@assets/icons/Github';
+import Amplify from '@assets/images/icons/amplify.png';
 import android from '@assets/images/icons/android.png';
 import arduino from '@assets/images/icons/arduino.png';
+import AWS from '@assets/images/icons/aws.png';
 import dart from '@assets/images/icons/dart.png';
+import DynamoDB from '@assets/images/icons/dynamoDB.png';
+import Expo from '@assets/images/icons/expo.png';
 import firebase from '@assets/images/icons/firebase.png';
 import flutter from '@assets/images/icons/flutter.png';
 import gemini from '@assets/images/icons/gemini.png';
@@ -13,12 +17,14 @@ import jitsi from '@assets/images/icons/jitsi.png';
 import kotlin from '@assets/images/icons/kotlin.png';
 import laravel from '@assets/images/icons/laravel.png';
 import mysql from '@assets/images/icons/mysql.png';
+import Nextjs from '@assets/images/icons/nextjs.png';
 import pusher from '@assets/images/icons/pusher.png';
 import react from '@assets/images/icons/react.png';
 import semaphore from '@assets/images/icons/semaphore.png';
 import tailwind from '@assets/images/icons/tailwind.png';
 import typescript from '@assets/images/icons/typescript.png';
 import vscode from '@assets/images/icons/vscode.png';
+import Arexed from '@assets/images/projects/Arexed.png';
 import MuzonEcoSave from '@assets/images/projects/MuzonEcoSave.png';
 import Pawsitive from '@assets/images/projects/Pawsitive.png';
 import SafeHaven from '@assets/images/projects/SafeHaven.png';
@@ -39,6 +45,32 @@ type Project = {
 };
 
 const projects: Project[] = [
+  {
+    id: '0',
+    image: Arexed,
+    title: 'Arexed',
+    tagline: 'Cross-platform fitness platform with real-time mobile → TV pairing.',
+    description: 'Hybrid app built with Expo React Native (mobile) and Next.js (web). Mobile devices can pair with TV screens via QR code to act as remote controls; workouts are organized into sections/subsections and sync in real time across devices. Backend is hosted on AWS using AppSync (GraphQL), Amplify, and DynamoDB for data sync, and scalability.',
+    lists: [
+      'Developed a fitness platform using Expo React Native (Mobile) and Next.js (Web), enabling mobile devices to act as a remote control for TV screens through QR code pairing.',
+      'Implemented workout management with sections and subsections, allowing seamless synchronization between mobile and web apps for real-time workout display and sharing.',
+      'Leveraged AWS services including AppSync (GraphQL API), Amplify, and DynamoDB to build a scalable backend infrastructure, supporting authentication, data storage, and cross-platform communication.'
+    ],
+    stacks: [
+      { title: 'React Native', icon: react },
+      { title: 'AWS', icon: AWS },
+      { title: 'DynamoDB', icon: DynamoDB },
+      { title: 'TypeScript', icon: typescript },
+      { title: 'Amplify', icon: Amplify },
+      { title: 'Expo Go', icon: Expo },
+      { title: 'Git', icon: git },
+      { title: 'VSCode', icon: vscode },
+      { title: 'NextJS', icon: Nextjs }
+    ],
+    color: 'arexedColor',
+    gradientColor: 'arexedColor',
+    url: 'https://github.com/ipn04/Arexed.git'
+  },
   {
     id: '1',
     image: MuzonEcoSave,

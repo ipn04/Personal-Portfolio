@@ -41,29 +41,43 @@
     }
 }
 .right {
-    width: 500px;
-    height: 500px;
-    border: 5px solid var(--color-secondary-text);
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    @include media-breakpoint-down(md) {
-        display: none;
-    }
-    @include media-breakpoint-down(xl) {
-        width: 400px !important;
-        height: 400px !important;
-    }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  @include media-breakpoint-down(xl) {
+    width: 400px !important;
+    height: 400px !important;
+  }
 }
+
+.right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 5px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #ff8000, #f0c, #04f);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 .profile-image {
     width: 450px;
     height: 450px;
     border-radius: 100px;
+    object-fit: cover;
     @include media-breakpoint-down(xl) {
         width: 350px !important;
         height: 350px !important;

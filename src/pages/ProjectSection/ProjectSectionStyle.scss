@@ -103,6 +103,16 @@
         }
       }
 
+      &.arexedColor .project-section-img-container {
+        background: linear-gradient(
+          188.62deg,
+          hsl(261, 59%, 54%) 49.9%,
+         rgb(113, 72, 189) 49.9%,
+          rgb(129, 99, 185) 49.9%,
+          rgb(200, 195, 250) 113.5%
+        );
+      }
+
       &.MESColor .project-section-img-container {
         background: linear-gradient(
           188.62deg,
@@ -258,6 +268,10 @@
         transition: background-color 0.3s ease;
       }
 
+      &.arexedColor .custom-line {
+        background-color: var(--project-color-arexed);
+      }
+
       &.MESColor .custom-line {
         background-color: var(--project-color-mes);
       }
@@ -286,6 +300,11 @@
         .lists-item {
           font-size: 14px;
         }
+
+        &.arexedColor .lists-item::marker {
+          color: var(--project-color-arexed);
+        }
+
         &.MESColor .lists-item::marker {
           color: var(--project-color-mes);
         }
