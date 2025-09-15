@@ -1,35 +1,58 @@
 import './Footer.scss';
+import Logo from '@assets/images/icons/logo.png';
 
-const Footer = () => {
+type FooterProps = {
+  onScrollTo?: (section: string) => void;
+};
+
+const Footer = ({ onScrollTo }: FooterProps) => {
   return (
     <div className="footer-container">
-      <footer className="text-center text-lg-start text-dark">
-        <section>
-          <div className="container text-center text-md-start">
+      <footer className="text-center text-lg-start">
+        <section className='footer-section'>
+          <div className="items container text-center text-md-start">
             <div className="row">
               <div className="col-md-3 col-lg-4 col-xl-3 mx-auto">
-                <h6 className="text-uppercase fw-bold">Ivan Nicolas</h6>
-                <hr className="custom-hr" />
+                <div className="title d-flex align-items-center">
+                  <span>
+                    <img className="logo" src={Logo} alt="Logo" />
+                  </span>
+                  <h6 className='text-uppercase fw-bold m-0'>
+                    Ivan Nicolas
+                  </h6>
+                </div>
+                <hr className="top-custom-hr" />
                 <p>I'm Ivan Nicolas, a Full-Stack Developer passionate about building intuitive, impactful digital solutions across the entire development stack — from interactive interfaces to scalable back-end systems.</p>
               </div>
 
-              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto">
-                <h6 className="text-uppercase fw-bold">Portfolio</h6>
+              <div className="sections col-md-2 col-lg-2 col-xl-2 mx-auto">
+                <h6 className="section-title text-uppercase fw-bold">Portfolio</h6>
                 <hr className="custom-hr" />
-                <p><a href="#!" className="text-dark">Home</a></p>
-                <p><a href="#!" className="text-dark">Academic & Experience</a></p>
-                <p><a href="#!" className="text-dark">Projects</a></p>
-                <p><a href="#!" className="text-dark">Tech Stack</a></p>
-                <p><a href="#!" className="text-dark">Achievements</a></p>
+                <p className='mb-2'>
+                  <span className="text-reset text-decoration-none cursor-pointer" onClick={() => onScrollTo?.('home')}>Home</span>
+                </p>
+                <p className='mb-2'>
+                  <span className="text-reset text-decoration-none cursor-pointer" onClick={() => onScrollTo?.('experience')}>Academic Experience</span>
+                </p>
+                <p className='mb-2'>
+                  <span className="text-reset text-decoration-none cursor-pointer" onClick={() => onScrollTo?.('projects')}>Projects</span>
+                </p>
+                <p className='mb-2'>
+                  <span className="text-reset text-decoration-none cursor-pointer" onClick={() => onScrollTo?.('tech')}>Tech Stack</span>
+                </p>
+                <p className='mb-2'>
+                  <span className="text-reset text-decoration-none cursor-pointer" onClick={() => onScrollTo?.('achievements')}>Achievements</span>
+                </p>
               </div>
-
-              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <h6 className="text-uppercase fw-bold">Contact</h6>
+              <div className="sections col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 className="section-title text-uppercase fw-bold">Contact</h6>
                 <hr className="custom-hr" />
-                <p><i className="fas fa-home me-2"></i> New York, NY 10012, US</p>
-                <p><i className="fas fa-envelope me-2"></i> info@example.com</p>
-                <p><i className="fas fa-phone me-2"></i> + 01 234 567 88</p>
-                <p><i className="fas fa-print me-2"></i> + 01 234 567 89</p>
+                <p className='mb-2'>
+                  ivan.nicolas446@gmail.com
+                </p>
+                <p className='mb-2'>
+                  Bagong Silang, Caloocan City
+                </p>
               </div>
             </div>
           </div>

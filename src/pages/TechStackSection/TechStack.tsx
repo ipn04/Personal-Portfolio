@@ -1,3 +1,4 @@
+import AWS from '@assets/images/icons/aws.png';
 import bootstrap from '@assets/images/icons/bootstrap.png';
 import expo from '@assets/images/icons/expo.png';
 import express from '@assets/images/icons/expressJS.png';
@@ -36,7 +37,8 @@ const techStack = [
   { title: 'NodeJS', icon: nodejs },
   { title: 'MongoDB', icon: mongoDB },
   { title: 'ExpressJS', icon: express },
-  { title: 'Expo', icon: expo }
+  { title: 'Expo', icon: expo },
+  { title: 'AWS', icon: AWS }
 ];
 
 function TechStack() {

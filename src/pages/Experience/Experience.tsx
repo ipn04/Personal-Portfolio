@@ -59,7 +59,6 @@ const experiences = [
       { title: 'React', icon: react },
       { title: 'Laravel', icon: laravel },
       { title: 'MySQL', icon: mysql },
-      { title: 'React', icon: react },
       { title: 'Tailwind', icon: tailwind },
       { title: 'Flutter', icon: flutter },
       { title: 'Dart', icon: dart },

@@ -1,18 +1,62 @@
-
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
 
 .footer-container {
-  .social-section {
-    background-color: #21D192;
+  p, span {
+    @include media-breakpoint-down(sm){
+      font-size: 12px;
+    }
   }
-
+  .section-title  {
+    @include media-breakpoint-down(sm){
+      margin-bottom: 8px;
+    }
+  }
+  .footer-section {
+    border-bottom: 1px solid var(--color-secondary-text);
+    padding: 20px 0;
+  }
+  .title {
+    @include media-breakpoint-down(sm){
+      justify-content: center;
+    }
+  }
+  .items {
+    color: var(--color-secondary-text);
+  }
+  .logo {
+    width: 20px;
+    height: 23px;
+    margin-right: 5px;
+  }
+  .sections {
+    @include media-breakpoint-down(sm){
+      margin-top: 20px;
+    }
+  }
   .custom-hr {
     margin: 0.5rem 0;
     width: 60px;
     height: 2px;
     border: none;
+    @include media-breakpoint-down(sm){
+      display: none;
+    }
   }
-
+  .top-custom-hr {
+    margin: 0.5rem 0;
+    width: 60px;
+    height: 2px;
+    border: none;
+  }
   .footer-bottom {
     font-size: 14px;
+    margin: 20px 0;
+  }
+
+  .cursor-pointer {
+    cursor: pointer;
   }
 }
+
