@@ -50,7 +50,7 @@ const projects: Project[] = [
     image: Arexed,
     title: 'Arexed',
     tagline: 'Cross-platform fitness platform with real-time mobile → TV pairing.',
-    description: 'Hybrid app built with Expo React Native (mobile) and Next.js (web). Mobile devices can pair with TV screens via QR code to act as remote controls; workouts are organized into sections/subsections and sync in real time across devices. Backend is hosted on AWS using AppSync (GraphQL), Amplify, and DynamoDB for data sync, and scalability.',
+    description: 'Hybrid app built with Expo React Native (mobile) and Next.js (web). Mobile devices can pair with TV screens via QR code to act as remote controls; workouts are organized into sections/subsections and sync in real time across devices.',
     lists: [
       'Developed a fitness platform using Expo React Native (Mobile) and Next.js (Web), enabling mobile devices to act as a remote control for TV screens through QR code pairing.',
       'Implemented workout management with sections and subsections, allowing seamless synchronization between mobile and web apps for real-time workout display and sharing.',

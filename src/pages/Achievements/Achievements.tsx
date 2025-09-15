@@ -122,7 +122,7 @@ function Achievements() {
           </div>
         </div>
 
-        <div className="p-5">
+        <div className="carousel-container p-5">
           <div
             className="infinite-carousel"
             onMouseEnter={() => setIsPaused(true)}

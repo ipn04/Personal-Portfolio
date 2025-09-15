@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './Popup.scss';
+import gmail from '@assets/images/icons/gmail.png';
 
 function Popup() {
   const [ isModalOpen, setIsModalOpen ] = useState(false);
@@ -15,9 +16,12 @@ function Popup() {
   return (
     <>
       {!isModalOpen &&
-        <button className="hire-btn" onClick={() => setIsModalOpen(true)}>
-            Send a Message
-        </button>
+        <div className="hire-container d-flex justify-content-center align-items-center">
+          <button className="hire-btn" onClick={() => setIsModalOpen(true)}>
+            <span className='hide'>Send a Message</span>
+            <img src={gmail} alt="Gmail Icon" />
+          </button>
+        </div>
       }
 
       <CSSTransition
