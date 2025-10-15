@@ -5,6 +5,7 @@ import Introduction from '@pages/Introduction/Introduction';
 import ProjectSection from '@pages/ProjectSection/ProjectSection';
 import TechStack from '@pages/TechStackSection/TechStack';
 import Footer from '@shared/CustomFooter/Footer';
+import Navbar from '@shared/CustomNavbar/Navbar';
 import Popup from '@shared/Popup/Popup';
 
 function App() {
@@ -20,6 +21,15 @@ function App() {
 
   return (
     <div className="main-container">
+      <Navbar
+        sectionRefs={{
+          home: introRef,
+          experience: experienceRef,
+          projects: projectRef,
+          tech: techRef,
+          achievements: achievementsRef
+        }}
+      />
       <div ref={introRef}>
         <Introduction onScrollToExperience={() => scrollTo(experienceRef)} />
       </div>

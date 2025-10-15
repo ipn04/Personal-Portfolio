@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './Popup.scss';
@@ -6,10 +7,23 @@ import gmail from '@assets/images/icons/gmail.png';
 function Popup() {
   const [ isModalOpen, setIsModalOpen ] = useState(false);
   const nodeRef = useRef(null);
-
+  const form = useRef<HTMLFormElement | null>(null);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Message sent!');
+    if (!form.current) return;
+    emailjs
+      .sendForm('service_uzow5v8', 'template_ykzm8gs', form.current, {
+        publicKey: 'WRMnnEIKXarepMcI1'
+      })
+      .then(
+        () => {
+          setIsModalOpen(false);
+          alert('Message sent!');
+        },
+        () => {
+          alert('Message failed to send.');
+        }
+      );
     setIsModalOpen(false);
   };
 
@@ -43,10 +57,10 @@ function Popup() {
                 ✕
               </button>
             </div>
-            <form onSubmit={handleSubmit}>
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <textarea placeholder="Your Message" rows={4} required />
+            <form ref={form} onSubmit={handleSubmit}>
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <textarea name="message" placeholder="Your Message" rows={4} required />
               <button type="submit" className="send-btn">Send</button>
             </form>
           </div>
