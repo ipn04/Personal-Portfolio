@@ -1,25 +1,51 @@
 import './ExperienceStyle.scss';
 import bootstrap from '@assets/images/icons/bootstrap.png';
-import dart from '@assets/images/icons/dart.png';
 import docker from '@assets/images/icons/docker.png';
 import Expogo from '@assets/images/icons/expo.png';
-import firebase from '@assets/images/icons/firebase.png';
-import flutter from '@assets/images/icons/flutter.png';
+import gcp from '@assets/images/icons/gcp.png';
 import git from '@assets/images/icons/git.png';
-import jitsi from '@assets/images/icons/jitsi.png';
 import laravel from '@assets/images/icons/laravel.png';
 import mysql from '@assets/images/icons/mysql.png';
 import nest from '@assets/images/icons/nestJS.png';
+import nextJs from '@assets/images/icons/nextjs.png';
 import nodejs from '@assets/images/icons/nodeJS.png';
 import pgsql from '@assets/images/icons/pgsql.png';
 import Postman from '@assets/images/icons/postman.png';
 import react from '@assets/images/icons/react.png';
+import swagger from '@assets/images/icons/swagger.png';
 import tailwind from '@assets/images/icons/tailwind.png';
 import typescript from '@assets/images/icons/typescript.png';
 import vscode from '@assets/images/icons/vscode.png';
 import CustomTitle from '@shared/CustomTitle/CustomTitle';
 
 const experiences = [
+  {
+    company: 'Kulay',
+    role: 'Full Stack Developer',
+    period: 'October 2025 – Present',
+    location: 'Philippines',
+    setup: 'Remote Work',
+    description: [
+      'As a Full Stack Developer, I led the development and implementation of the Foodpanda integration and the POS offline login feature, ensuring reliable order synchronization and uninterrupted store operations across 100+ deployed stores.',
+      'I worked across React, React Native, NextJS, and NestJS stacks, developing and maintaining front-end and back-end features, integrating APIs, handling revisions, and collaborating with senior developers through code reviews and Agile Scrum processes.'
+    ],
+    stacks: [
+      { title: 'React Native', icon: react },
+      { title: 'PostgreSQL', icon: pgsql },
+      { title: 'Github', icon: git },
+      { title: 'VSCode', icon: vscode },
+      { title: 'NestJS', icon: nest },
+      { title: 'NodeJS', icon: nodejs },
+      { title: 'Typescript', icon: typescript },
+      { title: 'Docker', icon: docker },
+      { title: 'Expo Go', icon: Expogo },
+      { title: 'Tailwind', icon: tailwind },
+      { title: 'Swagger', icon: swagger },
+      { title: 'Pub Sub', icon: gcp },
+      { title: 'Google Cloud', icon: gcp },
+      { title: 'NextJS', icon: nextJs }
+    ]
+  },
   {
     company: 'JLabs',
     role: 'Full Stack Engineer Intern',
@@ -45,29 +71,29 @@ const experiences = [
       { title: 'Expo Go', icon: Expogo },
       { title: 'Postman', icon: Postman }
     ]
-  },
-  {
-    company: 'National University Fairview',
-    role: 'Main Programmer/Developer',
-    period: 'August 2021 – August 2025',
-    location: 'Philippines, Quezon City',
-    description: [
-      'I served as one of the main programmers for various group projects and thesis work throughout my academic years. I was responsible for writing and maintaining code, collaborating with my team on system design, and ensuring the functionality of both front-end and back-end features.',
-      'The projects I worked on involved web and mobile development using tools and frameworks such as React, Laravel, Flutter, Dart, and Firebase. I also handled basic database management with MySQL and used Git and VSCode as part of my daily workflow.'
-    ],
-    stacks: [
-      { title: 'React', icon: react },
-      { title: 'Laravel', icon: laravel },
-      { title: 'MySQL', icon: mysql },
-      { title: 'Tailwind', icon: tailwind },
-      { title: 'Flutter', icon: flutter },
-      { title: 'Dart', icon: dart },
-      { title: 'Firebase', icon: firebase },
-      { title: 'Jitsi', icon: jitsi },
-      { title: 'Git', icon: git },
-      { title: 'VSCode', icon: vscode }
-    ]
   }
+  // {
+  //   company: 'National University Fairview',
+  //   role: 'Main Programmer/Developer',
+  //   period: 'August 2021 – August 2025',
+  //   location: 'Philippines, Quezon City',
+  //   description: [
+  //     'I served as one of the main programmers for various group projects and thesis work throughout my academic years. I was responsible for writing and maintaining code, collaborating with my team on system design, and ensuring the functionality of both front-end and back-end features.',
+  //     'The projects I worked on involved web and mobile development using tools and frameworks such as React, Laravel, Flutter, Dart, and Firebase. I also handled basic database management with MySQL and used Git and VSCode as part of my daily workflow.'
+  //   ],
+  //   stacks: [
+  //     { title: 'React', icon: react },
+  //     { title: 'Laravel', icon: laravel },
+  //     { title: 'MySQL', icon: mysql },
+  //     { title: 'Tailwind', icon: tailwind },
+  //     { title: 'Flutter', icon: flutter },
+  //     { title: 'Dart', icon: dart },
+  //     { title: 'Firebase', icon: firebase },
+  //     { title: 'Jitsi', icon: jitsi },
+  //     { title: 'Git', icon: git },
+  //     { title: 'VSCode', icon: vscode }
+  //   ]
+  // }
 ];
 
 function Experience() {

@@ -3,12 +3,14 @@ import bootstrap from '@assets/images/icons/bootstrap.png';
 import expo from '@assets/images/icons/expo.png';
 import express from '@assets/images/icons/expressJS.png';
 import firebase from '@assets/images/icons/firebase.png';
+import gcp from '@assets/images/icons/gcp.png';
 import git from '@assets/images/icons/git.png';
 import javascript from '@assets/images/icons/javascript.png';
 import laravel from '@assets/images/icons/laravel.png';
 import mongoDB from '@assets/images/icons/mongoDB.png';
 import mysql from '@assets/images/icons/mysql.png';
 import nest from '@assets/images/icons/nestJS.png';
+import nextJs from '@assets/images/icons/nextjs.png';
 import nodejs from '@assets/images/icons/nodeJS.png';
 import pgsql from '@assets/images/icons/pgsql.png';
 import php from '@assets/images/icons/php.png';
@@ -38,7 +40,9 @@ const techStack = [
   { title: 'MongoDB', icon: mongoDB },
   { title: 'ExpressJS', icon: express },
   { title: 'Expo', icon: expo },
-  { title: 'AWS', icon: AWS }
+  { title: 'AWS', icon: AWS },
+  { title: 'Google Cloud', icon: gcp },
+  { title: 'NextJS', icon: nextJs }
 ];
 
 function TechStack() {
