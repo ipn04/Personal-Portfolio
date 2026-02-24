@@ -43,7 +43,8 @@ const experiences = [
       { title: 'Swagger', icon: swagger },
       { title: 'Pub Sub', icon: gcp },
       { title: 'Google Cloud', icon: gcp },
-      { title: 'NextJS', icon: nextJs }
+      { title: 'NextJS', icon: nextJs },
+      { title: 'Docker', icon: docker }
     ]
   },
   {
